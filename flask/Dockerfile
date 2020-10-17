@@ -1,7 +1,4 @@
-FROM ubuntu:20.04
-
-RUN apt-get update -y && \
-    apt-get install -y python3-pip python3-dev
+FROM python:3.8.6-slim-buster
 
 COPY requirements.txt /app/requirements.txt
 
@@ -9,10 +6,10 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 8080
 
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["python"]
 
 CMD ["app.py"]
