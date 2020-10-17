@@ -4,4 +4,4 @@ setps:
 
 2. `docker run -p 8080:8080 -d test-flask-app`
 
-3. visi http://localhost:8080
+3. visit http://localhost:8080 to see response from your app.
